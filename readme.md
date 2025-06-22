@@ -16,28 +16,6 @@
 
 <br />
 
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-VPN-Headers-Footers)
-
----
-
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#overview">Overview</a>
-      <ol>
-        <li><a href="#key-components">Key Components</a></li>
-        <li><a href="#technology">Technology</a></li>
-      </ol>
-    </li>
-    <li><a href="#rules-practices-and-principles">Rules, Practices and Principles</a></li>
-    <li><a href="#resources">Resources</a></li>
-  </ol>
-</details>
-
----
-
-## Overview
 
 ## Overview
 
