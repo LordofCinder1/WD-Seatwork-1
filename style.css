@@ -130,3 +130,46 @@ nav,
   color: #003d80;
   font-weight: 500;
 }
+/* Header */
+.custom-header {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  padding: 20px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.custom-header .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+ 
+.custom-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+ 
+.custom-header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+ 
+.custom-header nav a:hover {
+  text-decoration: underline;
+}
+ 
+/* Footer */
+.custom-footer {
+  background: #222;
+  color: #eee;
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+ 
+.custom-footer p {
+  margin: 10px 0;
+}
