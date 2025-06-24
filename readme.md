@@ -51,8 +51,7 @@ All are tailored for a fictional VPN brand. The site was created as part of a fr
 2. All pages use **external CSS** (no inline styles unless necessary)
 3. File names follow **camelCase** (e.g., `headerBlock.html`, `footerGrid.css`)
 4. Clear and organized structure:
-
-    ```
+```
     assets
   css
     style.css
@@ -64,7 +63,7 @@ pages
 index.html
 LICENE
 readme.md
-
+```
 5. Visual consistency is achieved through:
    - Stick font for all headings
    - Themed animations (falling leaves, flicker glow)
