@@ -1,0 +1,21 @@
+.samurai-header, .samurai-footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffcc00;
+  padding: 1rem;
+  text-align: center;
+  font-family: 'Stick', cursive;
+  text-shadow: 1px 1px 2px black;
+}
+
+.samurai-main {
+  height: calc(100vh - 140px); /* adjust for header/footer height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon {
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: italic;
+}
