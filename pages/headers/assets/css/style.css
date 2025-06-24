@@ -1,21 +1,276 @@
-.samurai-header, .samurai-footer {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #ffcc00;
-  padding: 1rem;
-  text-align: center;
+/* General Reset & Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Stick', cursive;
-  text-shadow: 1px 1px 2px black;
+  background: url('../../assets/img/ninja.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 2rem;
+  text-align: center;
 }
 
-.samurai-main {
-  height: calc(100vh - 140px); /* adjust for header/footer height */
+.main-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffcc00;
+  text-shadow: 2px 2px black;
+  animation: flicker 2s infinite;
+}
+
+.back-button-container {
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  position: relative;
+  color: #ffcc00;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  overflow: hidden;
+}
+
+.back-button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: #ffcc00;
+  transition: width 0.18s ease;
+  transform: translateY(50%);
+}
+
+.back-button:hover::after {
+  width: 100%;
+}
+
+
+.headers-section {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  justify-content: center;
 }
 
-.coming-soon {
-  color: #fff;
-  font-size: 1.5rem;
+.header-block {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 900px;
+}
+
+.label {
+  margin-top: 1rem;
   font-style: italic;
+  color: #ccc;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+  }
+  20%, 22%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Leaves Animation */
+.leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.leaf {
+  filter: brightness(0);
+  position: absolute;
+  top: -10%;
+  width: 30px;
+  height: 30px;
+  background: url('../../assets/img/leaf.png') no-repeat center/contain;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+.leaf:nth-child(1) { left: 5%; animation-duration: 7s; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 25%; animation-duration: 8s; animation-delay: 2s; }
+.leaf:nth-child(3) { left: 45%; animation-duration: 6.5s; animation-delay: 1s; }
+.leaf:nth-child(4) { left: 65%; animation-duration: 9s; animation-delay: 3s; }
+.leaf:nth-child(5) { left: 85%; animation-duration: 7.8s; animation-delay: 1.5s; }
+
+@keyframes fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  50% { transform: translateX(30px) translateY(50vh) rotate(180deg); }
+  100% { transform: translateX(-30px) translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/* --- Unique Header Styles --- */
+
+/* Header 1: Glassmorphic + Search */
+.glass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.glass-header nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.glass-header .search input {
+  padding: 6px;
+  border-radius: 4px;
+  border: none;
+}
+
+.glass-header .search button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #ffcc00;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Header 2: Vertical Sidebar */
+.vertical-nav-header {
+  display: flex;
+  height: 200px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px;
+  width: 150px;
+}
+
+.sidebar a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.content-area {
+  flex: 1;
+  background-color: rgba(255,255,255,0.05);
+  margin-left: 10px;
+  padding: 20px;
+}
+
+/* Header 3: Centered Logo + Navigation */
+.centered-logo-nav h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc00;
+}
+
+.centered-logo-nav nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.centered-logo-nav nav a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Header 4: Dropdown */
+/* Header 4: Refined Dropdown */
+.minimal-dropdown nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  gap: 20px;
+  position: relative;
+}
+
+.minimal-dropdown nav li {
+  position: relative;
+}
+
+.minimal-dropdown nav a {
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+  padding: 0.5rem;
+  display: block;
+}
+
+/* Dropdown structure */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  min-width: 140px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* Individual links inside dropdown */
+.dropdown-content a {
+  color: #ffcc00;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+/* Header 5: Split Header Layout */
+.split-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.split-header .left span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.split-header .right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
 }

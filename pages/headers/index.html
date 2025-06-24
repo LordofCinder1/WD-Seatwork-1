@@ -4,20 +4,99 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Header Designs</title>
-  <link rel="stylesheet" href="../page1/assets/css/style.css"/>
+  <link rel="stylesheet" href="../../pages/headers/assets/css/style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="samurai-header">
-    <h1>Header Designs</h1>
-  </header>
 
-  <main class="samurai-main">
-    <p class="coming-soon">Content Coming Soon...</p>
-  </main>
+  <div class="leaves">
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+    <div class="leaf"></div>
+  </div>
 
-  <footer class="samurai-footer">
-    <a href="../samurai/index.html" class="menu-btn">← Back to Menu</a>
-  </footer>
+  <h1 class="main-title flicker">Header Designs</h1>
+
+  <div class="back-button-container">
+    <a href="../../index.html" class="back-button">Back to Home</a>
+  </div>
+
+  <section class="headers-section">
+
+    <!-- Header 1: Glassmorphic Search -->
+    <div class="header-block">
+      <header class="glass-header">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="search">
+          <input type="text" placeholder="Search...">
+          <button>Go</button>
+        </div>
+      </header>
+    </div>
+
+    <!-- Header 2: Vertical Nav Left -->
+    <div class="header-block">
+      <header class="vertical-nav-header">
+        <aside class="sidebar">
+          <a href="#">Dashboard</a>
+          <a href="#">Profile</a>
+          <a href="#">Settings</a>
+        </aside>
+        <div class="content-area">Main Content</div>
+      </header>
+    </div>
+
+    <!-- Header 3: Centered Logo and Nav -->
+    <div class="header-block">
+      <header class="centered-logo-nav">
+        <h2>MySite</h2>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Team</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Header 4: Minimalistic with Dropdown -->
+    <div class="header-block">
+      <header class="minimal-dropdown">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li class="dropdown">
+              <a href="#">More</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <!-- Header 5: Split Header -->
+    <div class="header-block">
+      <header class="split-header">
+        <div class="left">
+          <span>Welcome</span>
+        </div>
+        <div class="right">
+          <a href="#">Login</a>
+          <a href="#">Sign Up</a>
+        </div>
+      </header>
+    </div>
+
+  </section>
 </body>
 </html>
