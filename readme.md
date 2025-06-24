@@ -2,7 +2,6 @@
 
 <br/>
 
-<br />
 <div align="center">
   <a href="https://github.com/zyx-0314/">
     <img src="./assets/img/saging.jpg" alt="Logo" width="130" height="100">
@@ -11,40 +10,79 @@
 </div>
 
 <div align="center">
-  A scrollable single-page project showcasing five different header and footer designs for a fictional VPN website using HTML and CSS.
+  A scrollable multi-page project showcasing five different header and footer designs with samurai theme using HTML and CSS.
 </div>
 
-<br />
+---
 
+## 📄 Overview
 
-## Overview
+This project consists of two themed HTML pages:
 
-This project is a scrollable single-page website showcasing five custom header designs and five animated footer designs for a fictional VPN brand called "brandname." The purpose of this activity is to demonstrate web layout skills, animation effects, and styling using HTML and CSS. The overall design is inspired by Canva and follows a professional, clean theme using dark blue and white tones. The headers feature variations of logos, navigation links, and call-to-action buttons, while the footers incorporate different hover animations such as slide-up, slide-in, and zoom effects. This exercise highlights front-end development proficiency and creative interface design for modern web applications.
+- One page features **five unique header designs**
+- Another page includes **five creative footer designs**
+
+All are tailored for a fictional VPN brand. The site was created as part of a front-end web development exercise using HTML and CSS. It demonstrates animation effects, responsive layouting, and consistent styling under a themed design inspired by minimalist UI trends (dark mode, glow/flicker animations, falling leaves, etc.).
 
 ---
 
-### Key Components
+## 🎯 Key Components
 
-- Scrollable single-page layout
-- 5 unique **header designs** (logos, navigation, CTA)
-- 5 animated **footer designs** (slide, zoom, hover effects)
-- Dark blue & white theme based on VPN branding
-- Responsive layout using Flexbox
+- 🔹 **2 multi-section pages**: one for headers, one for footers  
+- 🔹 **5 header designs** – each with a unique layout (search bar, dropdowns, CTA, etc.)
+- 🔹 **5 footer designs** – ranging in complexity (basic to advanced structures)
+- 🔹 ⚡ Flicker light animation on page titles  
+- 🔹 🍃 Falling leaf animation for visual effect  
+- 🔹 📱 Responsive layout via Flexbox  
+- 🔹 🔁 Animated hover effects and transitions
 
 ---
 
-### Technology
+## 🛠 Technology
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
 ---
 
-## Rules, Practices and Principles
+## ✅ Rules, Practices & Principles
 
-1. Project name follows the `WD-` prefix format: `WD-VPN-Headers-Footers`.
-2. `index.html` used as the root HTML file.
-3. External CSS only (no inline styling except minor cases).
-4. File naming uses camelCase.
-5. Project follows this file structure:
+1. Project name follows the `WD-` prefix format: `WD-Seatwork-1`
+2. All pages use **external CSS** (no inline styles unless necessary)
+3. File names follow **camelCase** (e.g., `headerBlock.html`, `footerGrid.css`)
+4. Clear and organized structure:
+
+    ```
+    assets
+  css
+    style.css
+  img       
+  js  
+pages
+    footers
+    headers
+index.html
+LICENE
+readme.md
+
+5. Visual consistency is achieved through:
+   - Stick font for all headings
+   - Themed animations (falling leaves, flicker glow)
+   - Color palette: black background, gold/yellow accent (#ffcc00), white text
+
+---
+
+## 🧠 Learning Outcomes
+
+- Improved understanding of **semantic HTML5**
+- Developed **flex layout and responsive design** strategies
+- Practiced **CSS animations and hover effects**
+- Implemented consistent **UI/UX design language**
+- Gained experience in project structuring for web development
+
+---
+
+## 🧭 Navigation
+
+- [🔼 Back to Top](#readme-top)
 
