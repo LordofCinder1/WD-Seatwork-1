@@ -1,0 +1,109 @@
+.footers-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+  z-index: 2;
+  position: relative;
+}
+
+/* Shared Footer Style */
+footer {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #ffcc00;
+  font-family: 'Stick', cursive;
+  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+/* Footer 1: Centered text */
+.footer-1 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Footer 2: Split footer */
+.footer-2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-2 a {
+  color: #ffcc00;
+  text-decoration: none;
+  margin-left: 1rem;
+  position: relative;
+}
+
+.footer-2 a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.footer-2 a:hover::after {
+  width: 100%;
+}
+
+/* Footer 3: Social icons */
+.footer-3 {
+  text-align: center;
+}
+
+.footer-3 .social-icons {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-3 a {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  transition: transform 0.2s;
+}
+
+.footer-3 a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer 4: Column layout */
+.footer-4 {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.footer-4 .column h4 {
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.footer-4 .column a {
+  display: block;
+  color: #ffcc00;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.footer-4 .column a:hover {
+  text-decoration: underline;
+}
+
+/* Footer 5: Tagline */
+.footer-5 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ffd700;
+  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+}
