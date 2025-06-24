@@ -61,7 +61,7 @@ pages
     footers
     headers
 index.html
-LICENE
+LICENSE
 readme.md
 ```
 5. Visual consistency is achieved through:
