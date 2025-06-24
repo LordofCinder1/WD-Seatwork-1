@@ -1,109 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Stick', cursive;
+  background: url('../img/ninja.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffcc00;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+/*TITLE FLICKER*/
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px #000;
+}
+.flicker {
+  animation: flicker 4s infinite;
+}
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+  }
+  20%, 22%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/*DAHON*/
+.leaves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.leaf {
+  filter: brightness(0);  
+  position: absolute;
+  top: -10%;
+  width: 30px;
+  height: 30px;
+  background: url('../img/leaf.png') no-repeat center/contain;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+.leaf:nth-child(1) { left: 5%; animation-duration: 7s; animation-delay: 0s; }
+.leaf:nth-child(2) { left: 25%; animation-duration: 8s; animation-delay: 2s; }
+.leaf:nth-child(3) { left: 45%; animation-duration: 6.5s; animation-delay: 1s; }
+.leaf:nth-child(4) { left: 65%; animation-duration: 9s; animation-delay: 3s; }
+.leaf:nth-child(5) { left: 85%; animation-duration: 7.8s; animation-delay: 1.5s; }
+
+@keyframes fall {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+  50% { transform: translateX(30px) translateY(50vh) rotate(180deg); }
+  100% { transform: translateX(-30px) translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+/*BACK TO HOME*/
+.back-container {
+  margin-bottom: 2rem;
+}
+.back-button {
+  display: inline-block;
+  font-size: 1rem;
+  color: #ffcc00;
+  position: relative;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+.back-button::after {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transform: translateY(50%);
+  transition: width 0.4s ease;
+}
+.back-button:hover::after {
+  width: 100%;
+}
+
+/*FOOTER SECTION*/
 .footers-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 2rem 0;
   z-index: 2;
   position: relative;
 }
 
-/* Shared Footer Style */
 footer {
-  background-color: rgba(0, 0, 0, 0.65);
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  color: #ffcc00;
-  font-family: 'Stick', cursive;
-  box-shadow: 0 0 10px rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.65);
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0,0,0,0.7);
 }
 
-/* Footer 1: Centered text */
+/*F1*/
 .footer-1 {
-  text-align: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
 }
 
-/* Footer 2: Split footer */
-.footer-2 {
+/*F2*/
+.footer-2 .row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
   flex-wrap: wrap;
 }
-
 .footer-2 a {
   color: #ffcc00;
   text-decoration: none;
-  margin-left: 1rem;
   position: relative;
 }
-
 .footer-2 a::after {
   content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
-  width: 0%;
+  left: 0;
   height: 2px;
+  width: 0;
   background: #ffcc00;
   transition: width 0.3s ease;
 }
-
 .footer-2 a:hover::after {
   width: 100%;
 }
 
-/* Footer 3: Social icons */
-.footer-3 {
-  text-align: center;
+/*F3*/
+.footer-3 p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
-
 .footer-3 .social-icons {
-  margin-top: 0.5rem;
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
-
-.footer-3 a {
-  font-size: 1.5rem;
+.footer-3 .social-icons a {
+  font-size: 1.8rem;
   color: #ffcc00;
   transition: transform 0.2s;
 }
-
-.footer-3 a:hover {
+.footer-3 .social-icons a:hover {
   transform: scale(1.2);
 }
 
-/* Footer 4: Column layout */
+/*F4*/
 .footer-4 {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
   text-align: left;
-  flex-wrap: wrap;
 }
-
-.footer-4 .column h4 {
+.footer-4 .col h4 {
   margin-bottom: 0.5rem;
   color: #fff;
 }
-
-.footer-4 .column a {
+.footer-4 .col a {
   display: block;
   color: #ffcc00;
   text-decoration: none;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   font-size: 0.95rem;
 }
-
-.footer-4 .column a:hover {
+.footer-4 .col a:hover {
   text-decoration: underline;
 }
 
-/* Footer 5: Tagline */
-.footer-5 {
-  text-align: center;
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #ffd700;
-  text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00;
+/*F5*/
+.footer-5 .newsletter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.footer-5 input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.footer-5 button {
+  background: #ffcc00;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.footer-5 .bottom-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.footer-5 .bottom-links a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-5 .bottom-links a:hover {
+  text-decoration: underline;
 }
